@@ -28,3 +28,79 @@
     <p>Birazdan müşteri ekleme sistemini ekleyeceğiz.</p>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nirvana Nail CRM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>✨ Nirvana Nail CRM ✨</h1>
+        <nav>
+            <button onclick="showSection('form')">📋 Müşteri Ekle</button>
+            <button onclick="showSection('list')">📑 Müşteri Listesi</button>
+            <button onclick="showSection('upcoming')">⏳ Yaklaşan Randevular</button>
+        </nav>
+    </header>
+
+    <!-- 📋 Müşteri Ekleme Formu -->
+    <section id="form" class="section">
+        <h2>📋 Yeni Müşteri Ekle</h2>
+        <form id="customerForm">
+            <label>Ad Soyad</label>
+            <input type="text" id="name" placeholder="Müşteri adı" required>
+
+            <label>Telefon</label>
+            <input type="text" id="phone" placeholder="05xx xxx xx xx">
+
+            <label>İşlem</label>
+            <select id="service" required>
+                <option value="Kalıcı Oje">Kalıcı Oje</option>
+                <option value="Jel Tırnak">Jel Tırnak</option>
+                <option value="Pedikür">Pedikür</option>
+                <option value="Manikür">Manikür</option>
+            </select>
+
+            <label>Son Geliş Tarihi</label>
+            <input type="date" id="lastVisit" required>
+
+            <label>Kaç Günde Bir Geliyor?</label>
+            <input type="number" id="interval" placeholder="Örn: 30" required>
+
+            <button type="submit">➕ Müşteri Ekle</button>
+        </form>
+    </section>
+
+    <!-- 📑 Müşteri Listesi -->
+    <section id="list" class="section hidden">
+        <h2>📑 Müşteri Listesi</h2>
+        <table id="customerTable">
+            <thead>
+                <tr>
+                    <th>Ad Soyad</th>
+                    <th>Telefon</th>
+                    <th>İşlem</th>
+                    <th>Son Geliş</th>
+                    <th>Sonraki Randevu</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- JavaScript ile doldurulacak -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ⏳ Yaklaşan Randevular -->
+    <section id="upcoming" class="section hidden">
+        <h2>⏳ Yaklaşan Randevular</h2>
+        <ul id="upcomingList">
+            <!-- JavaScript ile doldurulacak -->
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
